@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__.'/../vendor/autoload.php';
-use Gregwar\Captcha\PhraseBuilder;
+use jkohl\captcha\PhraseBuilder;
 
 // We need the session to check the phrase after submitting
 session_start();

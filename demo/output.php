@@ -2,7 +2,7 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-use Gregwar\Captcha\CaptchaBuilder;
+use jkohl\captcha\CaptchaBuilder;
 
 header('Content-type: image/jpeg');
 

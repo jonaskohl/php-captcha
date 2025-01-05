@@ -1,6 +1,6 @@
 <?php
 
-namespace Gregwar\Captcha;
+namespace jkohl\captcha;
 
 use \Exception;
 
@@ -284,15 +284,15 @@ class CaptchaBuilder implements CaptchaBuilderInterface
         }
 
         if ($this->rand(0, 1)) { // Horizontal
-            $Xa   = $this->rand(0, $width/2);
+            $Xa   = $this->rand(0, $width / 2);
             $Ya   = $this->rand(0, $height);
-            $Xb   = $this->rand($width/2, $width);
+            $Xb   = $this->rand($width / 2, $width);
             $Yb   = $this->rand(0, $height);
         } else { // Vertical
             $Xa   = $this->rand(0, $width);
-            $Ya   = $this->rand(0, $height/2);
+            $Ya   = $this->rand(0, $height / 2);
             $Xb   = $this->rand(0, $width);
-            $Yb   = $this->rand($height/2, $height);
+            $Yb   = $this->rand($height / 2, $height);
         }
         imagesetthickness($image, $this->rand(1, 3));
         imageline($image, $Xa, $Ya, $Xb, $Yb, $tcol);
@@ -356,7 +356,7 @@ class CaptchaBuilder implements CaptchaBuilderInterface
         $col = \imagecolorallocate($image, $textColor[0], $textColor[1], $textColor[2]);
 
         // Write the letters one by one, with random angle
-        for ($i=0; $i<$length; $i++) {
+        for ($i = 0; $i < $length; $i++) {
             $symbol = mb_substr($phrase, $i, 1);
             $box = \imagettfbbox($size, 0, $font, $symbol);
             $w = $box[2] - $box[0];
@@ -415,7 +415,7 @@ class CaptchaBuilder implements CaptchaBuilderInterface
         }
 
         if ($font === null) {
-            $font = __DIR__ . '/Font/captcha'.$this->rand(0, 5).'.ttf';
+            $font = __DIR__ . '/Font/captcha' . $this->rand(0, 5) . '.ttf';
         }
 
         if (empty($this->backgroundImages)) {
@@ -430,7 +430,7 @@ class CaptchaBuilder implements CaptchaBuilderInterface
             imagefill($image, 0, 0, $bg);
         } else {
             // use a random background image
-            $randomBackgroundImage = $this->backgroundImages[rand(0, count($this->backgroundImages)-1)];
+            $randomBackgroundImage = $this->backgroundImages[rand(0, count($this->backgroundImages) - 1)];
 
             $imageType = $this->validateBackgroundImage($randomBackgroundImage);
 
@@ -440,7 +440,7 @@ class CaptchaBuilder implements CaptchaBuilderInterface
         // Apply effects
         if (!$this->ignoreAllEffects) {
             $square = $width * $height;
-            $effects = $this->rand($square/3000, $square/2000);
+            $effects = $this->rand($square / 3000, $square / 2000);
 
             // set the maximum number of lines to draw in front of the text
             if ($this->maxBehindLines != null && $this->maxBehindLines > 0) {
@@ -460,7 +460,7 @@ class CaptchaBuilder implements CaptchaBuilderInterface
         // Apply effects
         if (!$this->ignoreAllEffects) {
             $square = $width * $height;
-            $effects = $this->rand($square/3000, $square/2000);
+            $effects = $this->rand($square / 3000, $square / 2000);
 
             // set the maximum number of lines to draw in front of the text
             if ($this->maxFrontLines != null && $this->maxFrontLines > 0) {
@@ -690,7 +690,7 @@ class CaptchaBuilder implements CaptchaBuilderInterface
         // check if file exists
         if (!file_exists($backgroundImage)) {
             $backgroundImageExploded = explode('/', $backgroundImage);
-            $imageFileName = count($backgroundImageExploded) > 1? $backgroundImageExploded[count($backgroundImageExploded)-1] : $backgroundImage;
+            $imageFileName = count($backgroundImageExploded) > 1 ? $backgroundImageExploded[count($backgroundImageExploded) - 1] : $backgroundImage;
 
             throw new Exception('Invalid background image: ' . $imageFileName);
         }

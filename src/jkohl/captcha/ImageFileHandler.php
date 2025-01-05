@@ -1,6 +1,6 @@
 <?php
 
-namespace Gregwar\Captcha;
+namespace jkohl\captcha;
 
 use Symfony\Component\Finder\Finder;
 

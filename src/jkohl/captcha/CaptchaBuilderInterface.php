@@ -1,6 +1,6 @@
 <?php
 
-namespace Gregwar\Captcha;
+namespace jkohl\captcha;
 
 /**
  * A Captcha builder
