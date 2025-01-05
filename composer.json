@@ -1,9 +1,9 @@
 {
-    "name": "gregwar/captcha",
+    "name": "jonaskohl/captcha",
     "type": "library",
     "description": "Captcha generator",
     "keywords": ["captcha", "spam", "bot"],
-    "homepage": "https://github.com/Gregwar/Captcha",
+    "homepage": "https://github.com/jonaskohl/php-captcha",
     "license": "MIT",
     "authors": [
         {
@@ -14,6 +14,11 @@
         {
             "name": "Jeremy Livingston",
             "email": "jeremy.j.livingston@gmail.com"
+        },
+        {
+            "name": "Jonas Kohl",
+            "email": "contact@jonaskohl.de",
+            "homepage": "https://jonaskohl.de/"
         }
     ],
     "require": {
