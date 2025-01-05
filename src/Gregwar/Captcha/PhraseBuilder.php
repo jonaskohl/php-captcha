@@ -43,7 +43,7 @@ class PhraseBuilder implements PhraseBuilderInterface
         $chars = str_split($this->charset);
 
         for ($i = 0; $i < $this->length; $i++) {
-            $phrase .= $chars[array_rand($chars)];
+            $phrase .= $chars[random_int(0, count($chars) - 1)];
         }
 
         return $phrase;
