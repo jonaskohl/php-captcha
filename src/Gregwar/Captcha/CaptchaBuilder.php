@@ -44,7 +44,7 @@ class CaptchaBuilder implements CaptchaBuilderInterface
     protected $backgroundImages = array();
 
     /**
-     * @var resource
+     * @var \GdImage
      */
     protected $contents = null;
 
@@ -133,7 +133,7 @@ class CaptchaBuilder implements CaptchaBuilderInterface
      */
     public $tempDir = 'temp/';
 
-    public function __construct($phrase = null, PhraseBuilderInterface $builder = null)
+    public function __construct($phrase = null, ?PhraseBuilderInterface $builder = null)
     {
         if ($builder === null) {
             $this->builder = new PhraseBuilder;
