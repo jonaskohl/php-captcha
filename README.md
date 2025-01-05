@@ -1,9 +1,6 @@
 Captcha
 =======
 
-![Captchas examples](http://gregwar.com/captchas.png)
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YUXRLWHQSWS6L)
-
 Installation
 ============
 
@@ -13,7 +10,7 @@ With composer :
 {
     ...
     "require": {
-        "gregwar/captcha": "1.*"
+        "jonaskohl/captcha": "2.*"
     }
 }
 ```
@@ -127,18 +124,6 @@ Complete example
 
 If you want to see an example you can have a look at the ``demo/form.php``, which uses ``demo/session.php`` to
 render a captcha and check it after the submission
-
-Symfony Bundle
-================
-
-You can have a look at the following repository to enjoy the Symfony 2 bundle packaging this captcha generator :
-https://github.com/Gregwar/CaptchaBundle
-
-Yii2 Extension
-===============
-
-You can use the following extension for integrating with Yii2 Framework :
-https://github.com/juliardi/yii2-captcha
 
 License
 =======
