@@ -2,5 +2,6 @@
 demo/*.jpg
 demo/*.pgm
 demo/temp/
+/out.jpg
 vendor/
 .phpunit.result.cache
